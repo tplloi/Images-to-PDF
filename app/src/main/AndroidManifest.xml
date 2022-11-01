@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="swati4star.createpdf">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
-        tools:ignore="scopedStorage"/>
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="scopedStorage" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature
@@ -20,14 +21,16 @@
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:hardwareAccelerated="true"
-        android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"
         android:theme="@style/AppThemeWhite"
         tools:ignore="GoogleAppIndexingWarning,RtlEnabled">
-        <activity android:name=".activity.SplashActivity"
+        <activity
+            android:name=".activity.SplashActivity"
+            android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,9 +40,11 @@
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:exported="true"
             android:theme="@style/Base.Theme.AppCompat" />
         <activity
             android:name=".activity.MainActivity"
+            android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan">
@@ -63,7 +68,9 @@
                 android:name="android.app.shortcuts"
                 android:resource="@xml/shortcuts" />
         </activity>
-        <activity android:name=".activity.CropImageActivity" />
+        <activity
+            android:name=".activity.CropImageActivity"
+            android:exported="true" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -75,13 +82,27 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".activity.WelcomeActivity" />
-        <activity android:name=".activity.ImageEditor" />
-        <activity android:name=".activity.PreviewActivity" />
-        <activity android:name=".activity.RearrangeImages" />
-        <activity android:name=".activity.ImagesPreviewActivity" />
-        <activity android:name=".activity.RearrangePdfPages" />
-        <activity android:name=".activity.FavouritesActivity" />
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ImageEditor"
+            android:exported="true" />
+        <activity
+            android:name=".activity.PreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.RearrangeImages"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ImagesPreviewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.RearrangePdfPages"
+            android:exported="true" />
+        <activity
+            android:name=".activity.FavouritesActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
